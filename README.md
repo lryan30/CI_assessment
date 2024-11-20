@@ -1,9 +1,12 @@
 
-<img src="https://mjconroy.com/wp-content/uploads/2023/04/ATU-Logo.png" width="250" height="150">
+<img src="https://mjconroy.com/wp-content/uploads/2023/04/ATU-Logo.png" width="250" height="150"> 
+
+
 
 # Higher Diploma in Computing: Data Analytics 2024
 ##  Computer Infrastructure 
 
+<img src="https://raw.githubusercontent.com/ianmcloughlin/2425_computer_infrastructure/main/img/cloud.jpeg" width=500 height=350>
 
 **Objective:**
 -  to use various linux commands such as mkdir, date, wget and touch to automate and organize files, creation of timestamped files and data downloading. 
