@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash 
 
 date
 echo "Downloading weather data"
