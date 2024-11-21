@@ -1,10 +1,6 @@
 
-<img src="https://mjconroy.com/wp-content/uploads/2023/04/ATU-Logo.png" width="250" height="150"> 
 
-
-
-# Higher Diploma in Computing: Data Analytics 2024
-##  Computer Infrastructure 
+#  Computer Infrastructure 
 
 <img src="https://raw.githubusercontent.com/ianmcloughlin/2425_computer_infrastructure/main/img/cloud.jpeg" width=500 height=350>
 
@@ -20,4 +16,4 @@
   4. Create timestamped files 
   5. Download todays weather data 
   6. Timestamp the data 
-  7. Write the script </p>
+  7. Write the script 
