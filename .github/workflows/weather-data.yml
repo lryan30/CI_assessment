@@ -1,10 +1,14 @@
 name: Weather Data
 
+
 on:
-  schedule:
-    # Runs daily at 10:00 AM UTC
-    - cron: '0 10 * * *'
-  workflow_dispatch:  # Allows manual trigger of the workflow
+    push:
+      branches:
+        - main
+    schedule:
+      - cron: '0 10 * * *'
+    workflow_dispatch:
+  
 
 permissions:
   contents: write # Grant write permissions to push changes
