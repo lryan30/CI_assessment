@@ -1,6 +1,9 @@
 name: Weather data workflow
 
 on:
+  push:
+    branches:
+        - main  # This triggers the workflow on push to the 'main' branch
   schedule:
     - cron: '0 10 * * *'
   workflow_dispatch:
@@ -20,26 +23,31 @@ jobs:
       with:
         persist-credentials: true # Ensures credentials are available for pushing changes.
 
-    # Step 2: Set up Python
-    - name: Set up Pytho
+    # Step 2: pull latest changes from remote repository
+    - name: Pull latest changes
+      run: |
+        git pull origin main
+
+    # Step 3: Set up Python
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
-    # Step 3: Install dependencies 
+    # Step 4: Install dependencies 
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    # Step 4: Make the weather.sh script executable
+    # Step 5: Make the weather.sh script executable
     - name: Make weather.sh executable
       run: chmod +x weather.sh
 
 
-     # Step 5: Run the script
+     # Step 6: Run the script
     - name: Run weather.sh script
       run: bash weather.sh
       
-    # Step 6: Commit and push changes if there are any
+    # Step 7: Commit and push changes if there are any
     - name: Commit and push changes
       env: 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub Actions
