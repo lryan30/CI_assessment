@@ -1,18 +1,17 @@
 name: Weather data workflow
-
+# The workdlow is triggered by push events to the main branch, scheduled to run daily at 1:00 UTC, and can be manually triggered.
 on:
-  push:
+  push: 
     branches:
-        - main  # This triggers the workflow on push to the 'main' branch
+        - main  # This triggers the workflow when changes are pushed to the main branch.
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 22 * * *' # This triggers the workflow at 1:00 UTC every day. (ensures it runs daily)
   workflow_dispatch:
 
 
-permissions:
-  contents: write # Grant write permissions to push changes
-
-jobs:
+permissions: 
+  contents: write # workflow grants write permissions to the repository contents allowing it to push changes to the repository
+jobs: 
   run-weather:
     runs-on: ubuntu-latest
 
