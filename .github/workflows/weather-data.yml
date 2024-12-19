@@ -5,6 +5,9 @@ on:
   push: 
     branches:
         - main  # This triggers the workflow when changes are pushed to the main branch.
+    paths:
+      - 'weather.sh' # This triggers the workflow when changes are pushed to the weather.sh script.
+      - '.github/workflows/weather-data.yml' # This triggers the workflow when changes are pushed to the workflow file.
   schedule:
     - cron: '0 22 * * *' # This triggers the workflow at 22:00 UTC every day. (ensures it runs daily)
   workflow_dispatch:
