@@ -5,7 +5,7 @@ on:
     branches:
         - main  # This triggers the workflow when changes are pushed to the main branch.
   schedule:
-    - cron: '0 22 * * *' # This triggers the workflow at 1:00 UTC every day. (ensures it runs daily)
+    - cron: '0 22 * * *' # This triggers the workflow at 22:00 UTC every day. (ensures it runs daily)
   workflow_dispatch:
 
 
