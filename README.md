@@ -1,34 +1,36 @@
 
 
+
 #  Computer Infrastructure 
 
 
+<img src='https://t3.ftcdn.net/jpg/06/39/62/90/360_F_639629017_YjfnLtEGhYsnXr9GlyXf6dXwLVmVdaRW.jpg'>
+
+
+***
+
 **Project Overview:**
-This project demonstrates the use of various linux commands (`mkdir, date, wget, touch`) using the command line in the terminal to automate and organize tasks such as creating timestamped files and downloading weather data from an API. A bash script, `weather.sh` is used to automate the process of downloading and storing weather data in timestamped files in a data/weather directory. 
 
-A github actions workflow using a `.yml` file in the `.github/workflows` directory is used to  further automate the execution of the `weather.sh` script. This workflow runs the script daily and commits the downloaded data back to the repository, ensuring the weather data is regularly updated without manual intervention. 
+This project uses linux commands to automate and organise tasks such as creating timestamped files and downloading weather data via an API. A bash script is used to download and save the weather data in timestamped files within an assigned directory. 
+Additionally, a Github Actions workflow further automates the execution of the script. This workflow runs the script daily and commits the updated data back to the repository, ensuring the weather data is regularly updated without manual intervention. The project was developed and run in Github Codespaces, a cloud based integrated development environment provided by Github. It allows users to create, edit and run code directly in the cloud. 
 
+***
 **Github Actions:**
-Github actions is a tool provided by github to automate tasks. 
-The workflow triggers the execution of the `weather.sh` script and is configured to run daily at a specific time and can be triggered manually or by specific events usch as changes pushed to the naib branch. The workflow is triggered by three events. 
-1. push events: runs whenever changes are pushed to the main branch.
-2. scheduled events: runs daily at 10:00am (adjusted to 22:00 on 18/12/24)
-3. manual triggering: allows manua triggering from the github actions interface via the workflow dispatch. 
 
-The workflow is granted write permissions to the repository enabling it to commit and push the updated weather data back to the repository. 
+Github Actions is a continuous integration and continuous delivery (CI/CD) platform integrated directly into Github that automates tasks. In this project, the Github Actions workflow, located in the `.github/workflows` directory  automates the execution of the `weather.sh` script. it runs daily at 10:00am UTC (adjusted to 22:00 on 18/12/24)  but can also be triggered manually or by events like pushes to main branch. The workflow has write permissionsn enabling it to commit and push updated weather data back to the repository. 
 
 Workflow steps: 
-1. check out the repostitory: uses github/checkout@v3 to clone the repository. The persist-credentials:true ensures the github token is available for git commands such as git push
-2.  pull latest changes ensures the local repository is updated with any changes from the remote main branch to avoid conficts. 
-3.  set up python allows the workflow to install python 3.x to run dependencies required for this script. 
-4. install dependencies: installs necessary python libraries listed in the requirements.txt file to enable API interaction and data processing. 
-5. Make weather.sh executable ensures the weather.sh script has executable permissions with chmod+x.
-6. run the weather.sh script downloads weather data using wget, processes it and saves the data in a timestamped file in the data/weather directory. 
-7. commit and push changes commits the updated weather data and pushes it back to the main branch. 
-- git config: sets the github actions bot as the commit author
-- git add .: stages all the changes in the repository. 
-- git commit: commits changes with a message.
-- git push: pushes the changes to the remote repository
+-   Check out repository: Clones the repository using `github/checkout@v3` with `persist-credentials:true` for git commands.
+-    Pull latest changes: Updates the local repository with any changes from the remote main branch to avoid conficts. 
+-   Set up python: Installs python 3.x to run dependencies required for the script. 
+-   Install dependencies: Installs libraries listed in the requirements.txt file to enable API interaction and data processing.
+ -   Make `weather.sh` executable: Ensures the `weather.sh` script has executable permissions with chmod+x.
+-    Run the `weather.sh` script: Downloads weather data and saves as a timestamped file in `data/weather`.
+-  Commit and push changes: commits the updated weather data and pushes it to the repository with the following git commands.  
+    - git config: sets the github actions bot as the commit author.
+    - git add .: stages changes.
+    - git commit: commits changes.
+    - git push: pushes updates to the repository
 
 
 
