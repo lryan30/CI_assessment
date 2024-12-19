@@ -1,4 +1,5 @@
 name: Weather data workflow
+
 # The workflow is triggered by push events to the main branch, scheduled to run daily at 22:00 UTC, and can be manually triggered.
 on:
   push: 
