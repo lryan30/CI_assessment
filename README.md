@@ -4,7 +4,7 @@
 #  Computer Infrastructure 
 
 
-<img src='https://t3.ftcdn.net/jpg/06/39/62/90/360_F_639629017_YjfnLtEGhYsnXr9GlyXf6dXwLVmVdaRW.jpg'>
+<img src='https://t3.ftcdn.net/jpg/06/39/62/90/360_F_639629017_YjfnLtEGhYsnXr9GlyXf6dXwLVmVdaRW.jpg' height=400 width=800>
 
 
 ***
