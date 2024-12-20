@@ -12,7 +12,7 @@
 ## 1. Project Overview:
 
 This project uses linux commands to automate and organise tasks such as creating timestamped files and downloading weather data via an API. A bash script is used to download and save the weather data in timestamped files within an assigned directory. 
-Additionally, a Github Actions workflow further automates the execution of the script. This workflow runs the script daily and commits the updated data back to the repository, ensuring the weather data is regularly updated without manual intervention. The project was developed and run in Github Codespaces, a cloud based integrated development environment provided by Github. It allows users to create, edit and run code directly in the cloud. 
+Additionally, a Github Actions workflow further automates the execution of the script. This workflow runs the script daily and commits the updated data back to the repository, ensuring the weather data is regularly updated. The project was developed and run in Github Codespaces, a cloud based integrated development environment provided by Github. It allows users to create, edit and run code directly in the cloud. 
 
 
 ## 2. Setup:
