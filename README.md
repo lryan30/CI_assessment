@@ -57,7 +57,7 @@ Workflow steps:
 
 ## 6. Acknowledgements: 
 
--   The weather data is sourced from the Met Eireann API. 
+-   Met Eireann: API weather data.
 -   Github Codespaces: development environment. 
 -   Github Actions: automation.  
 -   ChatGPT: .yml workflow code. 
