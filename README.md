@@ -58,9 +58,10 @@ Workflow steps:
 ## 6. Acknowledgements: 
 
 -   The weather data is sourced from the Met Eireann API. 
--   Github Codespaces used for development environment. 
--   Github Actions used for automation.  
-
+-   Github Codespaces: development environment. 
+-   Github Actions: automation.  
+-   ChatGPT: .yml workflow code. 
+-   Adobe.com: Image source
 
 
 
@@ -71,3 +72,5 @@ Workflow steps:
 - https://github.com/ianmcloughlin/2425_computer_infrastructure/blob/main/README.md 
 - https://docs.github.com/en/codespaces/overview
 - https://docs.github.com/en/actions/about-github-actions/understanding-github-actions
+- https://pandas.pydata.org/docs/
+- https://matplotlib.org/stable/index.html
